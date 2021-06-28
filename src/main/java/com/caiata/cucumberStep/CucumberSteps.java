@@ -264,6 +264,7 @@ public class CucumberSteps {
         System.out.println("Numero elementi : " + i);
     }
 
+
     /**
      * Metodo per stampare numero di elementi nella pagina in webMobile
      */
