@@ -1,7 +1,8 @@
-package com.caiata.cucumberStep;
+package com.caiata.cucumber;
 
 import com.caiata.utils.ManagementDriver;
 import com.caiata.utils.Modello;
+import com.caiata.utils.Utility;
 import org.openqa.selenium.*;
 
 import java.util.ArrayList;
@@ -118,11 +119,20 @@ public class CucumberSteps {
     }
 
     /**
-     * Metodo per cercare la voce suggerita
+     * Metodo per cercare la voce suggerita mobile
      */
-    public void voceSuggerita(Properties prop){
+    public void voceSuggeritaMobile(Properties prop){
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS) ;
         driver.findElement(By.id(prop.getProperty("id.suggerimento"))).click();
+        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS) ;
+    }
+
+    /**
+     * Metodo per cercare la voce suggerita web
+     */
+    public void voceSuggeritaWeb(Properties prop){
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS) ;
+        driver.findElement(By.id(prop.getProperty("id.suggerita"))).click();
         driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS) ;
     }
 
@@ -176,18 +186,21 @@ public class CucumberSteps {
      */
     public ArrayList<Modello> getElementiPagine() {
         ArrayList<Modello> listaModello = new ArrayList<>();
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS) ;
         for (WebElement element : driver.findElement(By.className("s-main-slot"))
                 .findElements(By.cssSelector("div[data-component-type = 's-search-result']"))){
             driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS) ;
-            if(get(element)) {
+            /*if(get(element)) {
                 driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS) ;
                 listaModello.add(new Modello(element.findElement(By.className("a-spacing-none")).getText(),
                         element.findElement(By.className(("a-price-whole"))).getText(),
                         element.findElement(By.className("s-image")).getAttribute("src")));
             }else{
+
+             */
                 listaModello.add(new Modello(element.findElement(By.className("a-spacing-none")).getText(),
                         element.findElement(By.className("s-image")).getAttribute("src")));
-            }
+            //}
         }
         return listaModello;
     }
@@ -251,37 +264,36 @@ public class CucumberSteps {
     /**
      * Metodo per stampare numero di elementi nella pagina
      */
-    public void stampaNumero(Properties prop){
+    public String stampaNumero(Properties prop){
         driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS) ;
         driver.findElement(By.xpath(prop.getProperty("xpath.btn.novita"))).click();
         driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS) ;
         driver.findElement(By.xpath(prop.getProperty("xpath.videogiochi"))).click();
-
         int i = 0;
         for(WebElement element : driver.findElements(By.className("zg-item-immersion"))){
             i ++;
         }
         System.out.println("Numero elementi : " + i);
+        String strI = ""+i;
+        return strI;
     }
 
     /**
      * Metodo per stampare numero di elementi nella pagina in webMobile
      */
-    public void stampaNumeroMobile(Properties prop){
-        try {
+    public String stampaNumeroMobile(Properties prop){
             driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
             driver.findElement(By.xpath(prop.getProperty("xpath.novita"))).click();
             driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
             driver.findElement(By.xpath(prop.getProperty("xpath.videogiochi"))).click();
-            Thread.sleep(2000);
+            driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
             int i = 0;
             for (WebElement element : driver.findElements(By.className("a-fixed-left-grid-col"))) {
                 i++;
             }
             System.out.println("Numero elementi : " + i);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+            String strI = ""+i;
+        return strI;
     }
 
     /**
@@ -499,5 +511,63 @@ public class CucumberSteps {
         }
     }
 
+    /**
+     * Metodo per aprire nuove tab web
+     */
+    public boolean newTabWeb(){
+        try {
+            Thread.sleep(1000);
+            String principale = driver.getWindowHandle();
+            for (int i = 5; i < 8; i++) {
+                Thread.sleep(1000);
+                driver.findElement(By.cssSelector("div[data-index = '" + i + "']")).findElement(By.className("a-text-normal")).click();
+                Thread.sleep(1000);
+                String href = driver.getCurrentUrl();
+                Thread.sleep(1000);
+                driver.navigate().back();
+                Thread.sleep(1000);
+                driver.switchTo().newWindow(WindowType.TAB);
+                driver.get(href);
+                Thread.sleep(1000);
+                Utility.getScreenCast();
+                Thread.sleep(1000);
+                driver.switchTo().window(principale);
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * Metodo per aprire nuove tab mobile
+     */
+    public boolean newTabMobile(){
+        try {
+            Thread.sleep(1000);
+            String principale = driver.getWindowHandle();
+            for (int i = 5; i < 8; i++) {
+                Thread.sleep(1000);
+                driver.findElement(By.cssSelector("div[data-index = '" + i + "']")).findElement(By.className("a-text-normal")).click();
+                Thread.sleep(1000);
+                String href = driver.getCurrentUrl();
+                Thread.sleep(1000);
+                driver.navigate().back();
+                Thread.sleep(1000);
+                driver.switchTo().newWindow(WindowType.TAB);
+                driver.get(href);
+                Thread.sleep(1000);
+                Utility.getScreenCast();
+                Thread.sleep(1000);
+                driver.switchTo().window(principale);
+            }
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
 
 }
