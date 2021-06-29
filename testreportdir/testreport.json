@@ -1,1 +1,626 @@
-[]
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 6290407700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "start driver",
+            "match": {
+              "location": "CucumberTest.startDriver()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 8,
+        "name": "Print the category of amazon",
+        "description": "",
+        "id": "test-on-amazon.it;print-the-category-of-amazon",
+        "after": [
+          {
+            "result": {
+              "duration": 915208400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CucumberTest.stopDriver()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 11262524700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "open amazon",
+            "match": {
+              "location": "CucumberTest.openAmazon()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 106941900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "print the category",
+            "match": {
+              "location": "CucumberTest.printCategory()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1984183400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "start driver",
+            "match": {
+              "location": "CucumberTest.startDriver()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 12,
+        "name": "Search the suggest item",
+        "description": "",
+        "id": "test-on-amazon.it;search-the-suggest-item",
+        "after": [
+          {
+            "result": {
+              "duration": 873433600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CucumberTest.stopDriver()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 10699308600,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "open amazon",
+            "match": {
+              "location": "CucumberTest.openAmazon()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 164965400,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "make a search of item ipho",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ipho",
+                  "offset": 22
+                }
+              ],
+              "location": "CucumberTest.searchSuggested(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5368784000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "click on the suggest item",
+            "match": {
+              "location": "CucumberTest.suggest()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1988388300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "start driver",
+            "match": {
+              "location": "CucumberTest.startDriver()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 17,
+        "name": "Print the evidence item",
+        "description": "",
+        "id": "test-on-amazon.it;print-the-evidence-item",
+        "after": [
+          {
+            "result": {
+              "duration": 877771800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CucumberTest.stopDriver()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 10047471000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "open amazon",
+            "match": {
+              "location": "CucumberTest.openAmazon()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1109727300,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "evidence element are printed",
+            "match": {
+              "location": "CucumberTest.evidencePrint()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1805825400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "start driver",
+            "match": {
+              "location": "CucumberTest.startDriver()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 21,
+        "name": "Print item on the first three page",
+        "description": "",
+        "id": "test-on-amazon.it;print-item-on-the-first-three-page",
+        "after": [
+          {
+            "result": {
+              "duration": 993703100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CucumberTest.stopDriver()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 10898592800,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "open amazon",
+            "match": {
+              "location": "CucumberTest.openAmazon()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 154732500,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "make a search of item ipho",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ipho",
+                  "offset": 22
+                }
+              ],
+              "location": "CucumberTest.searchSuggested(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2576239900,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "click on the suggest item",
+            "match": {
+              "location": "CucumberTest.suggest()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5088443800,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "item page 1 are printed",
+            "match": {
+              "location": "CucumberTest.printItem()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3330925100,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "item page 2 are printed",
+            "match": {
+              "location": "CucumberTest.printItem2()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3192881300,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "item page 3 are printed",
+            "match": {
+              "location": "CucumberTest.printItem3()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1879835800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "start driver",
+            "match": {
+              "location": "CucumberTest.startDriver()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 29,
+        "name": "Open three element in three new tab",
+        "description": "",
+        "id": "test-on-amazon.it;open-three-element-in-three-new-tab",
+        "after": [
+          {
+            "result": {
+              "duration": 1096700100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CucumberTest.stopDriver()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 8681692000,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "open amazon",
+            "match": {
+              "location": "CucumberTest.openAmazon()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2868931700,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "search item iphone",
+            "match": {
+              "arguments": [
+                {
+                  "val": "iphone",
+                  "offset": 12
+                }
+              ],
+              "location": "CucumberTest.search(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 45809750000,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "open new tab",
+            "match": {
+              "location": "CucumberTest.newTab()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1916529500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "start driver",
+            "match": {
+              "location": "CucumberTest.startDriver()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 34,
+        "name": "Print number of element",
+        "description": "",
+        "id": "test-on-amazon.it;print-number-of-element",
+        "after": [
+          {
+            "result": {
+              "duration": 985444700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CucumberTest.stopDriver()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 11923035100,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "open amazon",
+            "match": {
+              "location": "CucumberTest.openAmazon()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2676232200,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "search item iphone",
+            "match": {
+              "arguments": [
+                {
+                  "val": "iphone",
+                  "offset": 12
+                }
+              ],
+              "location": "CucumberTest.search(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3652286900,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "print number",
+            "match": {
+              "location": "CucumberTest.printItemNumber()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1829878900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "start driver",
+            "match": {
+              "location": "CucumberTest.startDriver()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 39,
+        "name": "Add to cart and clear cart",
+        "description": "",
+        "id": "test-on-amazon.it;add-to-cart-and-clear-cart",
+        "after": [
+          {
+            "result": {
+              "duration": 1106321600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CucumberTest.stopDriver()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 10729775200,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "open amazon",
+            "match": {
+              "location": "CucumberTest.openAmazon()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2819337600,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "search item groot",
+            "match": {
+              "arguments": [
+                {
+                  "val": "groot",
+                  "offset": 12
+                }
+              ],
+              "location": "CucumberTest.search(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 49280624100,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "add item mascherina item borraccia item rocket at cart",
+            "match": {
+              "arguments": [
+                {
+                  "val": "mascherina",
+                  "offset": 9
+                },
+                {
+                  "val": "borraccia",
+                  "offset": 25
+                },
+                {
+                  "val": "rocket",
+                  "offset": 40
+                }
+              ],
+              "location": "CucumberTest.addCart(String,String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4650190400,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "clear cart",
+            "match": {
+              "location": "CucumberTest.clearCart()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Test on Amazon.it",
+    "description": "\r\nRule: only test on Amazon.it",
+    "id": "test-on-amazon.it",
+    "keyword": "Feature",
+    "uri": "amazon.feature"
+  }
+]
